@@ -18,6 +18,7 @@ import net.rchronicler.kibby.utils.Notify;
 import net.rchronicler.kibby.utils.UserSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -181,8 +182,12 @@ public class PlayController {
 
     private void endGame() {
         inputField.setDisable(true);
-        timeline.stop();
-        gameRunning = false;
+        if (timeline != null) {
+            timeline.stop();
+        }
+        if (gameRunning) {
+            gameRunning = false;
+        }
 
         // Calculate WPM
         double minutes = GAME_TIME / 60.0;
@@ -271,8 +276,12 @@ public class PlayController {
     }
 
     public void selectTime(ActionEvent e) {
-        timeline.stop();
-        gameRunning = false;
+        if (timeline != null) {
+            timeline.stop();
+        }
+        if (gameRunning) {
+            gameRunning = false;
+        }
 
         RadioButton selectedBtn = (RadioButton) e.getSource();
 
