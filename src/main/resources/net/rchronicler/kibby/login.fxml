@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.rchronicler.kibby.controllers.LoginController">
+    <children>
+        <Label layoutX="388.0" layoutY="122.0" prefHeight="19.0" prefWidth="190.0" text="Sign into your account!" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="386.0" layoutY="176.0" text="Username">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtUsername" layoutX="388.0" layoutY="196.0" prefHeight="35.0" prefWidth="190.0" promptText="johndoe" />
+        <Label layoutX="388.0" layoutY="242.0" text="Password">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="txtPasswordHidden" layoutX="388.0" layoutY="262.0" prefHeight="35.0" prefWidth="190.0" promptText="password" />
+        <TextField fx:id="txtPassword" layoutX="388.0" layoutY="262.0" prefHeight="35.0" prefWidth="190.0" promptText="password" visible="false" />
+      <CheckBox fx:id="checkShowPassword" layoutX="392.0" layoutY="308.0" mnemonicParsing="false" onAction="#togglePasswordText" text="Show password" />
+        <Button fx:id="btnLogin" defaultButton="true" layoutX="388.0" layoutY="336.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="190.0" text="Login" />
+        <Label focusTraversable="false" layoutX="388.0" layoutY="383.0" text="Don't have an account?" />
+        <Hyperlink layoutX="388.0" layoutY="408.0" onAction="#switchToRegister" text="Register here." />
+    </children>
+</AnchorPane>
