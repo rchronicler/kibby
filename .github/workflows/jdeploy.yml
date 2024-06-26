@@ -5,12 +5,12 @@ name: jDeploy CI with Maven
 
 on:
   push:
-    branches: ['*']
-    tags: ['*']
+    branches: ['production']
 
 jobs:
   build:
-
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
