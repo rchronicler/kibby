@@ -1,5 +1,5 @@
 # Kibby
-A simple and clean JavaFX desktop application for practicing typing with 10 fingers.
+A simple and clean JavaFX desktop application for practicing fast typing.
 
 # Screenshots
 ![image](https://github.com/rchronicler/kibby/assets/103647221/1539ea5e-f75f-49bb-9bca-d16b9cd0eae4)
